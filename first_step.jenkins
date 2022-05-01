@@ -11,16 +11,13 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First step") {
+        stage("Create docker") {
             steps {
-                sh 'hostname'
+                echo "============ start building image ============="
+                sh 'docker build . '
             }
         }
-        stage("Second step") {
-            steps {
-                sh 'uptime'
-            }
-        }
+
     }
 
 }
