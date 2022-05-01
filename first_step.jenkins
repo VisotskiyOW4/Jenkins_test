@@ -17,6 +17,11 @@ pipeline {
                 sh 'docker build . '
             }
         }
+        stage("Run docker") {
+            steps {
+                sh 'docker run test:0.1'
+            }
+        }
 
     }
 
