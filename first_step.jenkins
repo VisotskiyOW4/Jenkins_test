@@ -22,6 +22,11 @@ pipeline {
                 sh 'docker run testb:latest'
             }
         }
+        stage("Push docker to docker hub") {
+            steps {
+                sh 'docker push visotskiyw4o/testb:latest'
+            }
+        }
 
     }
 
