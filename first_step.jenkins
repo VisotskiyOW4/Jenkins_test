@@ -14,7 +14,7 @@ pipeline {
         stage("Create docker") {
             steps {
                 echo "============ start building image ============="
-                sh 'docker build -t testb:0.1 . '
+                sh 'docker build -t visotskiyw4o/testb:0.1 . '
             }
         }
         stage("Run docker") {
